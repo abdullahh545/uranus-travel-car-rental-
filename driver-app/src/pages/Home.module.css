@@ -1,0 +1,181 @@
+.page {
+  min-height: 100vh;
+  padding-bottom: 80px;
+}
+
+.header {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  padding: 52px 24px 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  color: white;
+}
+
+.greeting {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.name {
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: 2px;
+}
+
+.logoutBtn {
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.3);
+  color: white;
+  padding: 7px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+  margin-top: 4px;
+}
+
+.body {
+  padding: 20px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Status Card */
+.statusCard {
+  border-radius: var(--radius);
+  border: 1.5px solid;
+  padding: 20px;
+}
+
+.statusTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.statusLabel {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--grey-600);
+  font-weight: 600;
+}
+
+.statusValue {
+  font-size: 22px;
+  font-weight: 700;
+  margin-top: 4px;
+}
+
+.statusDot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px rgba(0,0,0,0.08);
+}
+
+.statusError {
+  font-size: 13px;
+  color: var(--danger);
+  margin-bottom: 10px;
+}
+
+.toggleBtn {
+  width: 100%;
+  padding: 12px;
+  background: transparent;
+  border: 2px solid;
+  border-radius: var(--radius-sm);
+  font-size: 15px;
+  font-weight: 600;
+  transition: opacity 0.2s, transform 0.1s;
+  margin-bottom: 16px;
+}
+
+.toggleBtn:active {
+  transform: scale(0.98);
+}
+
+.toggleBtn:disabled {
+  opacity: 0.5;
+}
+
+.statusOptions {
+  display: flex;
+  gap: 8px;
+}
+
+.statusPill {
+  flex: 1;
+  text-align: center;
+  padding: 6px 4px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 500;
+  background: white;
+  color: var(--grey-600);
+  border: 1px solid var(--grey-200);
+}
+
+.statusPillActive {
+  border-color: transparent;
+}
+
+/* Info Card */
+.infoCard {
+  background: white;
+  border-radius: var(--radius);
+  padding: 20px;
+  box-shadow: var(--shadow);
+}
+
+.cardTitle {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: var(--grey-800);
+}
+
+.infoRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--grey-100);
+}
+
+.infoRow:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.infoLabel {
+  font-size: 14px;
+  color: var(--grey-600);
+}
+
+.infoValue {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--grey-800);
+}
+
+/* Quick action */
+.ridesBtn {
+  width: 100%;
+  padding: 16px;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.ridesBtn:active {
+  transform: scale(0.98);
+}

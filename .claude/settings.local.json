@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(PGPASSWORD=\"Ragyty54@\" \"C:\\\\Program Files\\\\PostgreSQL\\\\16\\\\bin\\\\psql.exe\" -U postgres -p 5433 -d uranus_travel -c \"\nSELECT 'users' AS table, COUNT\\(*\\) FROM users\nUNION ALL SELECT 'drivers', COUNT\\(*\\) FROM drivers\nUNION ALL SELECT 'vehicles', COUNT\\(*\\) FROM vehicles\nUNION ALL SELECT 'bookings', COUNT\\(*\\) FROM bookings\nUNION ALL SELECT 'notifications', COUNT\\(*\\) FROM notifications;\" 2>&1)",
+      "Bash(cd:*)",
+      "Bash(cmd /c \"for /f \\\\\"tokens=5\\\\\" %a in \\('netstat -aon ^| findstr LISTENING ^| findstr :5000'\\) do taskkill /f /pid %a\" 2>&1; echo \"kill done\")",
+      "Bash(cmd /c \"for /f \\\\\"tokens=5\\\\\" %a in \\('netstat -aon ^| findstr LISTENING ^| findstr :5000'\\) do taskkill /f /pid %a\" 2>&1\necho \"exit: $?\")",
+      "Bash(powershell -Command \"\n\\\\$pids = \\(Get-NetTCPConnection -LocalPort 5000 -ErrorAction SilentlyContinue\\).OwningProcess\nif \\(\\\\$pids\\) {\n  \\\\$pids | ForEach-Object { Stop-Process -Id \\\\$_ -Force -ErrorAction SilentlyContinue }\n  Write-Host 'Killed PIDs:' \\(\\\\$pids -join ', '\\)\n} else {\n  Write-Host 'No process on port 5000'\n}\n\" 2>&1)",
+      "Bash(curl:*)",
+      "Bash(powershell -Command \"\\(Get-NetTCPConnection -LocalPort 5000 -ErrorAction SilentlyContinue\\).OwningProcess | ForEach-Object { Stop-Process -Id $_ -Force -ErrorAction SilentlyContinue }\" 2>&1\necho \"killed\")",
+      "Bash(powershell -Command \"\\(Get-NetTCPConnection -LocalPort 3002 -ErrorAction SilentlyContinue\\).State\" 2>&1)",
+      "Bash(PGPASSWORD='Ragyty54@' psql -h localhost -p 5433 -U postgres -d uranus_travel -c \"ALTER TABLE users ALTER COLUMN phone TYPE VARCHAR\\(50\\);\")",
+      "Bash(python3 .claude/skills/ui-ux-pro-max/scripts/search.py \"travel tourism luxury navy gold premium service login auth\" --design-system -p \"Uranus Travel\" -f markdown)",
+      "Bash(py:*)"
+    ]
+  }
+}
